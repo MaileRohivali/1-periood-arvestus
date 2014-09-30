@@ -29,4 +29,8 @@
     )
   ;
   $site_footer = "Arvestustöö: Maile Rohiväli - 30.09.2014" ;
+
+  function team_member($name, $email, $huviala) {
+    return $name . $email . $huviala;
+  }
 ?>
