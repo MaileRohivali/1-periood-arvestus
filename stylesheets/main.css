@@ -86,6 +86,10 @@ body, #site-container, .blog-post, #site-content, #site-footer {
 .team-member:nth-child(3n+3) {
   margin-right: 0;
 }
+img {
+  height: auto;
+  width: 250px;
+}
 @media screen and (max-width: 1025px) {
   .team-member:nth-child(3n+3) {
     margin-top: 20px;
