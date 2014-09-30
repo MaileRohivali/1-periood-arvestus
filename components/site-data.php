@@ -3,10 +3,12 @@
 
   $site_title = "Arvestustöö";
 
-  $menu_main = array("Avaleht" => "index.php", "Uudised" => "news.php", "Meeskond" => "team.php", "Harjutused" => "exercises.php");
+  $menu_main = array("Avaleht" => "index.php", "Uudised" => "news.php", "Meeskond" => "team.php", "Harjutused" => "exercises.php" , "Lisaylesanne" => "lisayl.php");
 
   $index_content = "<h2>Tere!</h2><p>Eesti Vabariik on riik Põhja-Euroopas. Eesti piirneb põhjas üle Soome lahe Soome Vabariigiga, läänes üle Läänemere Rootsi Kuningriigiga, lõunas Läti Vabariigiga ja idas Venemaa Föderatsiooniga. Eesti pindala on tänapäeval 45 227 ruutkilomeetrit, Teise maailmasõja eel oli see praegusest suurem.[5] Kaugemas ajaloos oli nüüdne Eesti Vabariigi territoorium üks osa Liivimaa territooriumist ning kuulus osaliselt või täielikult Taani, Rootsi, Saksa ja Vene riikide koosseisu.</p><p>Tänapäeval on Eesti demokraatlik parlamentaarne vabariik. Eesti Vabariigi territoorium on jagatud viieteistkümneks maakonnaks. Iga maakond on omakorda jagatud valdadeks. Suurim linn on pealinn Tallinn. 1,29 miljoni elanikuga on Eesti Euroopa Liidu üks väiksema elanikkonnaga riike. Eesti oli 22. septembrist 1921 Rahvasteliidu liige ning kuulub 17. septembrist 1991 Ühinenud Rahvaste Organisatsiooni ja OSCEsse, 13. novembrist 1999 WTOsse, 29. märtsist 2004 NATOsse, 1. maist 2004 Euroopa Liitu, 21. detsembrist 2007 Schengeni ruumi, 9. detsembrist 2010 OECDsse ja 1. jaanuarist 2011 euroalasse. Eesti rahaühik on euro. Eesti on alla kirjutanud keskkonnakaitsealasele Kyōto protokollile.</p>";
 
+  $extra_content = "<h2>Function arguments</h2><p>Information may be passed to functions via the argument list, which is a comma-delimited list of expressions. The arguments are evaluated from left to right.</p>";
+  
   $blog_news =
     array(
       array(
@@ -30,7 +32,7 @@
   ;
   $site_footer = "Arvestustöö: Maile Rohiväli - 30.09.2014" ;
 
-  function team_member($name, $email, $huviala) {
-    return $name . $email . $huviala;
+  function team_member($name = "nimetu", $email = "puudub", $huviala = "puudub") {
+    return '<div class="team-member"><h2 class="member-name">'.$name.'</h2><div class="member-info"><span>"E-mail:</span><a href="mailto:'.$email.'">'.$email.'</a></div><div class="member-info"><span>Huvialad: </span>'.$huviala.'</div></div>';
   }
 ?>
