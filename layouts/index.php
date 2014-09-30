@@ -10,8 +10,7 @@
 
     <main id="site-body">
       <section id="site-content">
-        <h2>Tere!</h2>
-        <p><?php echo $index_content ?></p>
+       <?php echo $index_content ?>
      </section>
     </main>
 
