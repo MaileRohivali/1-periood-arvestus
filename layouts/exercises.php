@@ -22,7 +22,15 @@
 
         <h2>Juhuslik pilt</h2>
         <!--  Sisesta siia kood -->
-        <img src="http://users.khk.ee/kaspar.naaber/svp/periood-1/arvestus/images/1.jpg">
+        <?php 
+        $total = "12";
+        $file_type = ".jpg";
+        $img_folder = "http://users.khk.ee/kaspar.naaber/svp/periood-1/arvestus/images/" ;
+        $start = "1";
+        $random = mt_rand($start, $total); 
+        $image_name = $random . $file_type; 
+        echo "<img src=\"$img_folder/$image_name\" alt=\"$image_name\" />"; 
+        ?>
         <h2>Kõikide piltide väljastamine</h2>
         <!--  Sisesta siia kood -->
       </section>
